@@ -6,12 +6,77 @@
     <meta charset="UTF-8">
     
     <title>Survey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-<h1> This is the survey page </h1>
+<div class="container">
+    
+    <div class="row">
+        
+        <div class="col s12">
+            
+            
+            <div class="section">
+                <h4> Survey Questions </h4>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="section">
+                <h5> About You </h5>
+                <form>
+                    <label>Name (Required)
+                        <input type="text" id="name">
+                    </label>
+                    
+                    <label>Link to Photo Image (Required)
+                        <input type="text" id="photo">
+                    </label>
+                </form>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="section">
+                <form>
+                    <h4>Question 1</h4>
+                    <p>This is a question</p>
+                    <label> question 1
+                        <select id="q1">
+                            <option value="1">1(Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5(Strongly Agree)</option>
+                        </select>
+                    </label>
+                
+                </form>
+            </div>
+            
+            <!--<div class="section">-->
+            <!--<a href="/survey">-->
+            <!--<button> Submit</button>-->
+            <!--</a>-->
+            <!---->
+            <!--</div>-->
+            
+        </div>
+    
+    </div>
+    
+    
+    <a href="" target="blank">API Friends List</a> |
+    <a href="" target="blank">GitHub Repo</a>
+</div>
 
 
 </body>
