@@ -6,6 +6,7 @@ const friends = require('../data/friends.js');
 const lowestDiff = [];
 let count = 0;
 let totalDifference;
+let bestFriendIndex;
 
 app.get("/api/friends", function(req, res) {
     //will display all friends
@@ -18,6 +19,15 @@ app.post("/api/friends", function(req, res) {
     //compare the newFriend against all other friends
     //determine the lowest "difference" between newFriend and other friends
     //display the best match
+    friends.push(newFriend);
+    return res.json(friends);
+});
+
+//new end point
+// /api/friends/id
+//return friend by id + bestfriend id
+
+app.get("/api/friends/id", function(req, res) {
     const newFriend = req.body;
     do {
         totalDifference = 0;
@@ -33,8 +43,10 @@ app.post("/api/friends", function(req, res) {
     console.log(lowestDiff);
     
     console.log(lowestDiff.indexOf(Math.min.apply(null, lowestDiff)));
+    bestFriendIndex = lowestDiff.indexOf(Math.min.apply(null, lowestDiff));
     
-    friends.push(newFriend);
-    return res.json(friends);
+    console.log(friends[bestFriendIndex].name);
+    console.log(friends[bestFriendIndex].photo);
+    res.send(bestFriendIndex);
 });
 

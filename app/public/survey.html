@@ -207,14 +207,12 @@
                     <i class="material-icons right">send</i>
                 </button>
             </form>
-    
-           
-    
+            
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4>Your Best Match Is</h4>
-                    <p>Name of Person!</p>
-                    <!--<img src="//selected friend's image">-->
+                    <p id="bestName"></p>
+                    <img id="bestPhoto" src=>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -223,7 +221,7 @@
             
         </div>
     
-<a href="" target="blank">API Friends List</a> |
+<a href="/api/friends" target="blank">API Friends List</a> |
 <a href="" target="blank">GitHub Repo</a>
 
 </div>
@@ -252,6 +250,10 @@
         }).fail(function(err) {
             console.log(err);
         });
+        
+        $.get("/api/friends/id", function(data) {
+           $("#bestName").text(data.name);
+        })
     })
 
 </script>
