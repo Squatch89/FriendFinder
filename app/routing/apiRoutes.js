@@ -44,10 +44,10 @@ app.post("/api/friends", function(req, res) {
 // /api/friends/id
 //return friend by id + bestfriend id
 
-app.get("/api/friends/", function(req, res) {
-   
-    console.log(friends[bestFriendIndex]);
-    return res.send(friends[bestFriendIndex]);
-    
-});
+// app.get("/api/friends/", function(req, res) {
+//
+//     console.log(friends[bestFriendIndex]);
+//     return res.send(friends[bestFriendIndex]);
+//
+// });
 

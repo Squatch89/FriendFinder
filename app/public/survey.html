@@ -211,7 +211,7 @@
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4>Your Best Match Is</h4>
-                    <p id="bestName"></p>
+                    <h5 id="bestName"></h5>
                     <img id="bestPhoto" src=>
                 </div>
                 <div class="modal-footer">
@@ -251,16 +251,17 @@
             console.log(data);
             console.log("------------------");
             $("#bestName").text(data.name);
+            $(".modal-content").append(`<img src="${data.photo}" width="50%" height="50%">`);
         }).fail(function(err) {
             console.log(err);
         });
         
-        $.get("/api/friends", function(data) {
-           $("#bestName").text(data.name);
-           console.log("this is get data");
-           console.log(data);
-            console.log("------------------");
-        })
+//        $.get("/api/friends", function(data) {
+//           $("#bestName").text(data.name);
+//           console.log("this is get data");
+//           console.log(data);
+//            console.log("------------------");
+//        })
     })
 
 </script>
