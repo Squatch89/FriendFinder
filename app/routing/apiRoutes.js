@@ -16,18 +16,6 @@ app.get("/api/friends", function(req, res) {
 app.post("/api/friends", function(req, res) {
     //will handle results from the survey
     
-    //compare the newFriend against all other friends
-    //determine the lowest "difference" between newFriend and other friends
-    //display the best match
-    friends.push(newFriend);
-    return res.json(friends);
-});
-
-//new end point
-// /api/friends/id
-//return friend by id + bestfriend id
-
-app.get("/api/friends/id", function(req, res) {
     const newFriend = req.body;
     do {
         totalDifference = 0;
@@ -47,6 +35,19 @@ app.get("/api/friends/id", function(req, res) {
     
     console.log(friends[bestFriendIndex].name);
     console.log(friends[bestFriendIndex].photo);
-    res.send(bestFriendIndex);
+    
+    friends.push(newFriend);
+    return res.send(friends[bestFriendIndex]);
+});
+
+//new end point
+// /api/friends/id
+//return friend by id + bestfriend id
+
+app.get("/api/friends/", function(req, res) {
+   
+    console.log(friends[bestFriendIndex]);
+    return res.send(friends[bestFriendIndex]);
+    
 });
 

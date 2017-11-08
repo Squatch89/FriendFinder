@@ -242,17 +242,24 @@
             scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
         };
         
+        console.log("this is the new friend");
         console.log(newFriend);
+        console.log("--------------------");
         
         $.post("/api/friends", newFriend).done(function (data) {
-            console.log(`this is data`);
+            console.log(`this is post data`);
             console.log(data);
+            console.log("------------------");
+            $("#bestName").text(data.name);
         }).fail(function(err) {
             console.log(err);
         });
         
-        $.get("/api/friends/id", function(data) {
+        $.get("/api/friends", function(data) {
            $("#bestName").text(data.name);
+           console.log("this is get data");
+           console.log(data);
+            console.log("------------------");
         })
     })
 
