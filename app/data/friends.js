@@ -8,6 +8,11 @@ const friends = [
         name: "Alex",
         photo: "https://news.skyskor.com/wp-content/uploads/2017/10/alex.jpg",
         scores: [5, 4, 3, 2, 1, 5, 4, 3, 2, 1]
+    },
+    {
+        name: "Katie",
+        photo: "https://vignette.wikia.nocookie.net/paw-patrol/images/6/6f/Katie.png/revision/latest?cb=20131124144854",
+        scores: [1, 2, 3, 5, 4, 4, 5, 1, 5, 3]
     }
 ];
 
